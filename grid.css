@@ -50,6 +50,7 @@
  */
 
 .grid > .grid {
+    display: inline-block;
     overflow: hidden;
     margin-right: 0;
     margin-left: 0;
