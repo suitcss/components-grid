@@ -7,7 +7,7 @@ A SUIT component for a CSS grid. The grid makes use of `inline-block` and
 
 N.B. This component relies on particular dimensions being applied to cells in
 the grid via other classes. For example, [SUIT
-dimensions](https://github.com/suitcss/utils-dimensions/) or the [SUIT
+dimensions](https://github.com/suitcss/utils-dimension/) or the [SUIT
 Grid Layouts](https://github.com/suitcss/grid-layouts/) extension.
 
 Read more about [SUIT](https://github.com/suitcss/suit/).
