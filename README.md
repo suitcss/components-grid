@@ -14,10 +14,9 @@ Read more about [SUIT](https://github.com/suitcss/suit/).
 
 ## Installation
 
-* [Bower](http://bower.io/): `bower install --save suit-grid`
-* [Component(1)](http://component.io/): `component install suitcss/grid`
-* Download: [zip](https://github.com/suitcss/grid/zipball/master)
-* Git: `git clone https://github.com/suitcss/grid`
+* [Component(1)](https://github.com/component/component/): `component install suitcss/components-button`
+* [npm](http://npmjs.org/): `npm install --save suit-components-button`
+* [Bower](http://bower.io/): `bower install --save suit-button`
 
 ## Features
 
