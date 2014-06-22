@@ -1,8 +1,8 @@
 {
-  "name": "suit-components-grid",
-  "version": "1.2.0",
+  "name": "suitcss-components-grid",
+  "version": "1.4.0",
   "author": "Nicolas Gallagher",
-  "main": "grid.css",
+  "main": "lib/grid.css",
   "ignore": [
     "build",
     "components",
@@ -10,7 +10,6 @@
     ".*",
     "CHANGELOG.md",
     "component.json",
-    "package.json",
-    "test.html"
+    "package.json"
   ]
 }
