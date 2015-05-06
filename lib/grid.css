@@ -38,11 +38,11 @@
  * 2. Reset font size change made in `Grid`.
  */
 
-.Grid--removeWhitespace {
+.Grid--collapseWhitespace {
   font-size: 0; /* 1 */
 }
 
-.Grid--removeWhitespace > .Grid-cell {
+.Grid--collapseWhitespace > .Grid-cell {
   font-size: var(--Grid-font-size); /* 2 */
 }
 
