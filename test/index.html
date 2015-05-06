@@ -36,9 +36,15 @@
       </div>
     </div>
   </div>
-  <h3 class="Test-it">removes inter-cell whitespace</h3>
+  <h3 class="Test-it">doesn't collapse whitespace with font-size by default</h3>
   <div class="Test-run">
     <div class="Grid">
+      <div class="Grid-cell u-size1of2"><div class="fixture-Box">1</div></div><div class="Grid-cell u-size1of2"><div class="fixture-Box">2</div></div>
+    </div>
+  </div>
+  <h3 class="Test-it">.Grid--removeWhitespace removes inter-cell whitespace</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--removeWhitespace">
       <div class="Grid-cell u-size1of4">
         <div class="fixture-Box">1</div>
       </div>
@@ -55,7 +61,7 @@
   </div>
   <h3 class="Test-it">automatically wraps cells across multiple lines when they don't fit a single row</h3>
   <div class="Test-run">
-    <div class="Grid">
+    <div class="Grid Grid--removeWhitespace">
       <div class="Grid-cell u-size1of4">
         <div class="fixture-Box">1</div>
       </div>
@@ -84,7 +90,7 @@
   </div>
   <h3 class="Test-it">arranges cells of different heights into clear rows</h3>
   <div class="Test-run">
-    <div class="Grid">
+    <div class="Grid Grid--removeWhitespace">
       <div class="Grid-cell u-size1of4">
         <div class="fixture-Box fixture-Box--doubleHeight">1</div>
       </div>
@@ -113,7 +119,7 @@
   </div>
   <h3 class="Test-it">supports nested grids</h3>
   <div class="Test-run">
-    <div class="Grid">
+    <div class="Grid Grid--removeWhitespace">
       <div class="Grid-cell u-size3of4">
         <div class="fixture-Box">1</div>
         <div class="Grid">
@@ -134,7 +140,7 @@
   <h2 class="Test-describe">.Grid--alignCenter</h2>
   <h3 class="Test-it">center-aligns all grid cells but not their content</h3>
   <div class="Test-run">
-    <div class="Grid Grid--alignCenter">
+    <div class="Grid Grid--removeWhitespace Grid--alignCenter">
       <div class="Grid-cell u-size1of3">
         <div class="fixture-Box">1</div>
       </div>
@@ -150,7 +156,7 @@
   <h2 class="Test-describe">.Grid--alignRight</h2>
   <h3 class="Test-it">right-aligns all grid cells but not their content</h3>
   <div class="Test-run">
-    <div class="Grid Grid--alignRight">
+    <div class="Grid Grid--removeWhitespace Grid--alignRight">
       <div class="Grid-cell u-size1of4">
         <div class="fixture-Box">1</div>
       </div>
@@ -166,7 +172,7 @@
   <h2 class="Test-describe">.Grid--alignMiddle</h2>
   <h3 class="Test-it">middle-aligns all grid cells</h3>
   <div class="Test-run">
-    <div class="Grid Grid--alignMiddle">
+    <div class="Grid Grid--removeWhitespace Grid--alignMiddle">
       <div class="Grid-cell u-size1of4">
         <div class="fixture-Box">1</div>
       </div>
@@ -185,7 +191,7 @@
   <h2 class="Test-describe">.Grid--alignBottom</h2>
   <h3 class="Test-it">bottom-aligns all grid cells</h3>
   <div class="Test-run">
-    <div class="Grid Grid--alignBottom">
+    <div class="Grid Grid--removeWhitespace Grid--alignBottom">
       <div class="Grid-cell u-size1of4">
         <div class="fixture-Box">1</div>
       </div>
@@ -204,7 +210,7 @@
   <h2 class="Test-describe">.Grid-cell--center</h2>
   <h3 class="Test-it">centers an individual grid cell but not its content</h3>
   <div class="Test-run">
-    <div class="Grid">
+    <div class="Grid Grid--removeWhitespace">
       <div class="Grid-cell u-size1of2">
         <div class="fixture-Box">1</div>
       </div>
@@ -220,7 +226,7 @@
   <h2 class="Test-describe">.Grid--withGutter</h2>
   <h3 class="Test-it">supports gutters</h3>
   <div class="Test-run">
-    <div class="Grid Grid--withGutter">
+    <div class="Grid Grid--removeWhitespace Grid--withGutter">
       <div class="Grid-cell u-size1of4">
         <div class="fixture-Box">1</div>
       </div>
@@ -237,10 +243,10 @@
   </div>
   <h3 class="Test-it">doesn't apply gutters to nested grids</h3>
   <div class="Test-run">
-    <div class="Grid Grid--withGutter">
+    <div class="Grid Grid--removeWhitespace Grid--withGutter">
       <div class="Grid-cell u-size1of2">
         <div class="fixture-Box">1</div>
-        <div class="Grid">
+        <div class="Grid Grid--removeWhitespace">
           <div class="Grid-cell u-size1of2">
             <div class="fixture-Box">Nested 1</div>
           </div>
@@ -251,7 +257,7 @@
       </div>
       <div class="Grid-cell u-size1of2">
         <div class="fixture-Box">2</div>
-        <div class="Grid">
+        <div class="Grid Grid--removeWhitespace Grid--removeWhitespace">
           <div class="Grid-cell u-size1of2">
             <div class="fixture-Box">Nested 1</div>
           </div>
@@ -264,7 +270,7 @@
   </div>
   <h3 class="Test-it">correctly aligns gutters when using offsets (requires suitcss-utils-offset)</h3>
   <div class="Test-run">
-    <div class="Grid Grid--withGutter">
+    <div class="Grid Grid--removeWhitespace Grid--withGutter">
       <div class="Grid-cell u-size1of4">
         <div class="fixture-Box">1</div>
       </div>
@@ -275,7 +281,7 @@
         <div class="fixture-Box">3</div>
       </div>
     </div>
-    <div class="Grid Grid--withGutter">
+    <div class="Grid Grid--removeWhitespace Grid--withGutter">
       <div class="Grid-cell u-size1of4 u-after1of4">
         <div class="fixture-Box">1</div>
       </div>
@@ -289,10 +295,10 @@
   </div>
   <h3 class="Test-it">correctly aligns gutters within nested grids</h3>
   <div class="Test-run">
-    <div class="Grid Grid--withGutter">
+    <div class="Grid Grid--removeWhitespace Grid--withGutter">
       <div class="Grid-cell u-size1of2">
         <div class="fixture-Box">1</div>
-        <div class="Grid Grid--withGutter">
+        <div class="Grid Grid--removeWhitespace Grid--withGutter">
           <div class="Grid-cell u-size1of2">
             <div class="fixture-Box">Nested 1</div>
           </div>
@@ -303,7 +309,7 @@
       </div>
       <div class="Grid-cell u-size1of2">
         <div class="fixture-Box">2</div>
-        <div class="Grid Grid--withGutter">
+        <div class="Grid Grid--removeWhitespace Grid--withGutter">
           <div class="Grid-cell u-size1of2">
             <div class="fixture-Box">Nested 1</div>
           </div>

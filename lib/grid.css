@@ -20,17 +20,30 @@
  *
  * 1. Account for browser defaults of elements that might be the root node of
  *    the component.
- * 2. Remove inter-cell whitespace that appears between `inline-block` child
- *    elements.
- * 3. Ensure consistent default alignment.
+ * 2. Ensure consistent default alignment.
  */
 
 .Grid {
   display: block; /* 1 */
-  font-size: 0; /* 2 */
   margin: 0; /* 1 */
   padding: 0; /* 1 */
-  text-align: left; /* 3 */
+  text-align: left; /* 2 */
+}
+
+/**
+ * Modifier: whitespace
+ *
+ * 1. Remove inter-cell whitespace that appears between `inline-block` child
+ *    elements.
+ * 2. Reset font size change made in `Grid`.
+ */
+
+.Grid--removeWhitespace {
+  font-size: 0; /* 1 */
+}
+
+.Grid--removeWhitespace > .Grid-cell {
+  font-size: var(--Grid-font-size); /* 2 */
 }
 
 /**
@@ -89,21 +102,19 @@
  * utility or a component class that extends 'grid'.
  *
  * 1. Fundamentals of the non-float grid layout.
- * 2. Reset font size change made in `Grid`.
- * 3. Keeps content correctly aligned with the grid direction.
- * 4. Controls vertical positioning of units.
- * 5. Make cells full-width by default.
+ * 2. Keeps content correctly aligned with the grid direction.
+ * 3. Controls vertical positioning of units.
+ * 4. Make cells full-width by default.
  */
 
 .Grid-cell {
   box-sizing: border-box;
   display: inline-block; /* 1 */
-  font-size: var(--Grid-font-size); /* 2 */
   margin: 0;
   padding: 0;
-  text-align: left; /* 3 */
-  vertical-align: top; /* 4 */
-  width: 100%; /* 5 */
+  text-align: left; /* 2 */
+  vertical-align: top; /* 3 */
+  width: 100%; /* 4 */
 }
 
 /**
