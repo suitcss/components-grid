@@ -81,6 +81,20 @@
   padding: 0 calc(0.5 * var(--Grid-gutter-size));
 }
 
+/**
+ * Modifier: flexbox grid
+ */
+
+.Grid--flex {
+  display: flex;
+  flex-direction: row
+  flex: 1;
+}
+
+.Grid--flex > .Grid-cell {
+  display: flex;
+}
+
 /* Grid cell
    ========================================================================== */
 

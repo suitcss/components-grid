@@ -16,6 +16,13 @@
     min-height: 100px;
   }
 
+  .fixture-Box--flexBottom {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
   .Test {
     padding: 0 10px;
   }
@@ -314,4 +321,23 @@
       </div>
     </div>
   </div>
+  <h2 class="Test-describe">.Grid--flex</h2>
+  <h3 class="Test-it">uses flexbox</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--flex Grid--withGutter">
+      <div class="Grid-cell u-size1of4">
+        <div class="u-sizeFull fixture-Box">1</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="u-sizeFull fixture-Box fixture-Box--doubleHeight">2</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="u-sizeFull fixture-Box">3</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="fixture-Box fixture-Box--flexBottom">4</div>
+      </div>
+    </div>
+  </div>
+
 </div>
