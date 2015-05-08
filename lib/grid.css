@@ -39,6 +39,7 @@
 
 .Grid--alignCenter {
   text-align: center;
+  justify-content: center;
 }
 
 /**
@@ -47,6 +48,7 @@
 
 .Grid--alignRight {
   text-align: right;
+  justify-content: flex-end;
 }
 
 /**
@@ -57,12 +59,20 @@
   vertical-align: middle;
 }
 
+.Grid--alignMiddle {
+  align-items: center;
+}
+
 /**
  * Modifier: bottom-align grid cells
  */
 
 .Grid--alignBottom > .Grid-cell {
   vertical-align: bottom;
+}
+
+.Grid--alignBottom {
+  align-items: flex-end;
 }
 
 /**
