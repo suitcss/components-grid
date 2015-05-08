@@ -87,7 +87,7 @@
 
 .Grid--flex {
   display: flex;
-  flex-direction: row
+  flex-direction: row;
   flex: 1;
 }
 
