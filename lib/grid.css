@@ -97,8 +97,9 @@
 
 .Grid--flex {
   display: flex;
-  flex-direction: row;
   flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .Grid--flex > .Grid-cell {
