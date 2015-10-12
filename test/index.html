@@ -16,6 +16,13 @@
     min-height: 100px;
   }
 
+  .fixture-Box--flexBottom {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+
   .Test {
     padding: 0 10px;
   }
@@ -314,4 +321,75 @@
       </div>
     </div>
   </div>
+  <h2 class="Test-describe">.Grid--flex</h2>
+  <h3 class="Test-it">uses flexbox</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--flex Grid--withGutter">
+      <div class="Grid-cell u-size1of4">
+        <div class="u-sizeFull fixture-Box">1</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="u-sizeFull fixture-Box fixture-Box--doubleHeight">2</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="u-sizeFull fixture-Box">3</div>
+      </div>
+      <div class="Grid-cell u-size1of4">
+        <div class="fixture-Box fixture-Box--flexBottom">4</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="Test-it">center-aligns all grid cells but not their content</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--flex Grid--alignCenter">
+      <div class="Grid-cell u-size1of3">
+        <div class="u-sizeFull fixture-Box">1</div>
+      </div>
+      <div class="Grid-cell u-size1of3">
+        <div class="u-sizeFull fixture-Box">2</div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">middle-aligns all grid cells</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--flex Grid--alignMiddle">
+      <div class="Grid-cell u-size1of2">
+        <div class="u-sizeFull fixture-Box">1</div>
+      </div>
+      <div class="Grid-cell u-size1of2">
+        <div class="u-sizeFull fixture-Box fixture-Box--doubleHeight">2</div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">bottom-aligns all grid cells</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--flex Grid--alignBottom">
+      <div class="Grid-cell u-size1of2">
+        <div class="u-sizeFull fixture-Box">1</div>
+      </div>
+      <div class="Grid-cell u-size1of2">
+        <div class="u-sizeFull fixture-Box fixture-Box--doubleHeight">2</div>
+      </div>
+    </div>
+  </div>
+  <h3 class="Test-it">cells will wrap</h3>
+  <div class="Test-run">
+    <div class="Grid Grid--flex">
+      <div class="Grid-cell u-size1of2">
+        <div class="u-sizeFull fixture-Box">1</div>
+      </div>
+      <div class="Grid-cell u-size1of2">
+        <div class="u-sizeFull fixture-Box fixture-Box--doubleHeight">2</div>
+      </div>
+      <div class="Grid-cell u-size1of2">
+        <div class="u-sizeFull fixture-Box">3</div>
+      </div>
+      <div class="Grid-cell u-size1of2">
+        <div class="u-sizeFull fixture-Box">4</div>
+      </div>
+
+    </div>
+  </div>
+
 </div>
