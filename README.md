@@ -2,7 +2,7 @@
 
 [![Build Status](https://secure.travis-ci.org/suitcss/components-grid.png?branch=master)](http://travis-ci.org/suitcss/components-grid)
 
-A CSS grid component. The grid makes use of `inline-block` and `box-sizing` to
+A CSS grid component. The grid makes use of `flexbox` and `box-sizing` to
 provide features that float-based layouts cannot.
 
 N.B. This component relies on particular dimensions being applied to cells in
@@ -14,19 +14,18 @@ Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 ## Installation
 
 * [npm](https://www.npmjs.org/package/suitcss-components-grid): `npm install suitcss-components-grid`
-* [Component(1)](http://component.io/): `component install suitcss/components-grid`
-* [Bower](http://bower.io/): `bower install suit-components-grid`
-* Download: [zip](https://github.com/suitcss/grid/zipball/master)
+* Download: [zip](https://github.com/suitcss/components-grid/releases/latest)
 
 ## Features
 
 * Fluid layout.
 * Intelligent cell wrapping.
+* Evenly fit cell spacing
+* Equal height columns
 * Horizontal centering of cells.
 * Custom vertical alignment of cells (top, bottom, or middle).
 * Cell width is controlled independently of grid gutter.
 * Infinite nesting.
-* Built-in redundancy.
 
 ## Available classes
 
@@ -35,22 +34,35 @@ Read more about [SUIT CSS](https://github.com/suitcss/suit/).
 * `Grid--alignRight`: right-align all child `Grid-cell`
 * `Grid--alignMiddle`: middle-align all child `Grid-cell`
 * `Grid--alignBottom`: bottom-align all child `Grid-cell`
+* `Grid--fit`: evenly distribute space amongst all child `Grid-cell`
+* `Grid--equalHeight`: all child `Grid-cell` match height of the tallest
 * `Grid--withGutter`: adds a gutter between cells
 * `Grid-cell`: a child cell of `Grid` that wraps grid content
 * `Grid-cell--center`: center an individual `Grid-cell`
 
 ## Configurable variables
 
-* `--font-size-Grid`: the font-size to use within the Grid (defaults to 1rem).
-* `--gutter-size-Grid`: the width of the gutter applied by the `Grid--withGutter` modifier class.
+* `--Grid-gutter-size`: the width of the gutter applied by the `Grid--withGutter` modifier class.
 
 ## Use
 
 A simple grid is easy to create. A grid container can have any number of child
-cells.
+cells. When used with `Grid--fit` space is evenly distributed without need for
+sizing utilities.
 
 ```html
-<div class="Grid [Grid--alignCenter|Grid--alignRight|Grid--alignMiddle|Grid--alignBottom]">
+<div class="Grid Grid--fit Grid--withGutter">
+  <div class="Grid-cell"></div>
+  <div class="Grid-cell"></div>
+  <div class="Grid-cell"></div>
+  <div class="Grid-cell"></div>
+</div>
+```
+
+For more granular control over layout make use of modifiers and sizing utilities.
+
+```html
+<div class="Grid [Grid--alignCenter|Grid--alignRight|Grid--alignMiddle|Grid--alignBottom|Grid--fit|Grid--equalHeight]">
   <div class="Grid-cell u-size1of2 u-lg-size6of12"></div>
   <div class="Grid-cell u-size1of2 u-lg-size4of12"></div>
   <div class="Grid-cell u-size1of3 u-lg-size2of12"></div>
@@ -89,7 +101,7 @@ BAD:
 ```
 
 You can nest grids in any context, including one that uses dimension or offset
-utilities, but keep in mind that the the dimensions will be relative to the
+utilities, but keep in mind that the dimensions will be relative to the
 grid's width, and not the width of the whole application.
 
 ```html
@@ -116,10 +128,16 @@ To generate a build:
 npm run build
 ```
 
-To generate the testing build.
+To generate the testing build:
 
 ```
 npm run build-test
+```
+
+To watch the files for making changes to test:
+
+```
+npm run watch
 ```
 
 Basic visual tests are in `test/index.html`.
@@ -128,6 +146,8 @@ Basic visual tests are in `test/index.html`.
 
 * Google Chrome (latest)
 * Opera (latest)
-* Firefox 4+
-* Safari 5+
-* Internet Explorer 9+
+* Firefox 28+
+* Safari 6.1+
+* Internet Explorer 10+
+
+Refer to the [caniuse](http://caniuse.com/) page for [flexbox](http://caniuse.com/#feat=flexbox)
