@@ -1,6 +1,6 @@
 {
   "name": "suitcss-components-grid",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "license": "MIT",
   "style": "index.css",
   "files": [
@@ -9,10 +9,11 @@
     "lib"
   ],
   "devDependencies": {
-    "stylelint-config-suitcss": "^1.0.0",
+    "stylelint": "^5.4.0",
+    "stylelint-config-suitcss": "^5.0.0",
     "suitcss-components-test": "*",
-    "suitcss-preprocessor": "^0.8.0",
-    "suitcss-utils-offset": "^0.5.1",
+    "suitcss-preprocessor": "^2.0.0",
+    "suitcss-utils-offset": "^1.0.0",
     "suitcss-utils-size": "^1.0.0"
   },
   "scripts": {

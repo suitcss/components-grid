@@ -1,6 +1,6 @@
 # SUIT CSS components-grid
 
-[![Build Status](https://secure.travis-ci.org/suitcss/components-grid.png?branch=master)](http://travis-ci.org/suitcss/components-grid)
+[![Build Status](https://travis-ci.org/suitcss/components-grid.svg?branch=master)](https://travis-ci.org/suitcss/components-grid)
 
 A CSS grid component. The grid makes use of `flexbox` and `box-sizing` to
 provide features that float-based layouts cannot.
@@ -67,6 +67,15 @@ For more granular control over layout make use of modifiers and sizing utilities
   <div class="Grid-cell u-size1of2 u-lg-size4of12"></div>
   <div class="Grid-cell u-size1of3 u-lg-size2of12"></div>
   <div class="Grid-cell u-size1of3"></div>
+</div>
+```
+
+Fit cells to their content and allow others to fill the remaining space.
+
+```html
+<div class="Grid">
+  <div class="Grid-cell u-sizeFit">Fit to content</div>
+  <div class="Grid-cell u-sizeFill">Take up remaining space</div>
 </div>
 ```
 
