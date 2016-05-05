@@ -11,6 +11,11 @@
     min-height: 50px;
   }
 
+  .level1 {
+    background: rgba(100, 150, 50, 0.7);
+    border: 1px solid black;
+  }
+
   .fixture-Box--doubleHeight {
     min-height: 100px;
   }
@@ -130,18 +135,18 @@
   </div>
   <h3 class="Test-it">supports nested grids</h3>
   <div class="Test-run">
-    <div class="Grid">
-      <div class="Grid-cell u-size3of4">
-        <div class="fixture-Box">1</div>
-        <div class="Grid">
-          <div class="Grid-cell u-size1of3">
-            <div class="fixture-Box">Nested 1</div>
+    <div class="Grid nested">
+      <div class="Grid-cell level1 u-size3of4">
+        Level 1
+        <div class="Grid Grid--fit">
+          <div class="Grid-cell">
+            <div class="fixture-Box">Level 2</div>
           </div>
-          <div class="Grid-cell u-size1of3">
-            <div class="fixture-Box">Nested 2</div>
+          <div class="Grid-cell">
+            <div class="fixture-Box">Level 2</div>
           </div>
-          <div class="Grid-cell u-size1of3">
-            <div class="fixture-Box">Nested 3</div>
+          <div class="Grid-cell">
+            <div class="fixture-Box">Level 2</div>
           </div>
         </div>
       </div>
