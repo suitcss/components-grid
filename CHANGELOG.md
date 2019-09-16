@@ -5,6 +5,7 @@
 ### 4.0.0 (January 25, 2018)
 
 * Rename `Grid-fit` to `Grid-fill` and repurpose to match sizing utility behavior [#51](https://github.com/suitcss/components-grid/issues/51).
+* Remove `Grid-cell` in favour of implicit Grid child [#54](https://github.com/suitcss/components-grid/pull/54)
 
 ### 3.0.3 (May 05, 2016)
 
