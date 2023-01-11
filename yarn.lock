@@ -2346,6 +2346,10 @@ suitcss-utils-before@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/suitcss-utils-before/-/suitcss-utils-before-1.0.1.tgz#977f1b46b65db140571ebe5f767a12a4a7bc4931"
 
+suitcss-utils-flex@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/suitcss-utils-flex/-/suitcss-utils-flex-2.0.1.tgz#7ddc146bb0b8d52e5181257c7f4329c495b00c5f"
+
 suitcss-utils-offset@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/suitcss-utils-offset/-/suitcss-utils-offset-1.0.0.tgz#0232b12207bd6419a837a2e4f2b4a23798e087e2"
